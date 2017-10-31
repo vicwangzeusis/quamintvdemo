@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>演示：jQuery抛出球体以抛物线轨迹的实验</title>
+        <script src="./js/jquery-1.12.4.min.js"></script>
+        <script src="./demo.js"></script>
+        <style type="text/css">
+            .btns{text-align:center;}
+            .btns a{
+                color:#fff;padding:5px 10px;font-family:Arial;
+                background-color:#f90;text-decoration:none;
+            }
+            .boll {
+                width: 50px;
+                height: 50px;
+                background-color: #ff3333;
+                position: absolute;
+                top: 380px;
+                left: 100px;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+            }
+
+            .target {
+                width: 50px;
+                height: 50px;
+                background-color: #CDCDCD;
+                position: fixed;
+                top: 300px;
+                right: 0;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="btns" style="margin-top:20px">
+            <a href="javascript:;" id="run">开始</a>
+            <a href="javascript:;" id="reset">重置</a>    
+            <a href="javascript:;" id="stop">停止</a>
+            <a href="javascript:;" id="setOptions">设置参数</a>
+        </div>
+        <div id="boll" class="boll"></div>
+        <div id="target" class="target"></div>
+        <script type="text/javascript">
+            var bool = new Parabola({
+                el: "#boll",
+                // offset: [500, 100],//抵消
+                targetEl: $("#target"),//目的地
+                curvature: 0.001,//曲率
+                duration: 1000,//持续时间
+                // callback: function() {
+                //     alert("完成后回调")
+                // },
+                // stepCallback: function(x, y) {
+                //     console.log(x, y);
+                //     $("<div>").appendTo("body").css({
+                //         "position": "absolute",
+                //         "top": this.elOriginalTop + y,
+                //         "left": this.elOriginalLeft + x,
+                //         "background-color": "#CDCDCD",
+                //         "width": "5px",
+                //         "height": "5px",
+                //         "border-radius": "5px"
+                //     });
+                // }
+            });
+            $("#reset").click(function() {
+                bool.reset()
+            });
+            $("#run").click(function() {
+                bool.start();
+            });
+            $("#stop").click(function() {
+                bool.stop();
+            });
+            $("#setOptions").click(function() {
+                bool.setOptions({
+                    targetEl: $("#target"),//目标地址
+                    curvature: 0.004, //曲线偏离直线的弧度
+                    duration: 1000 //动画延时毫秒
+                });
+            });
+
+// 获取位置的
+    function getX(e) {
+      e = e || window.event;
+      return e.pageX || e.clientX + document.body.scroolLeft;
+    }
+    function getY(e) {
+      e = e|| window.event;
+      return e.pageY || e.clientY + document.boyd.scrollTop;
+    }
+    var x = getX();
+    var y = getY();
+    console.log(x,y);
+    $("#cycleFloat").css({"display":"block","top":y-30,"left":x-30});
+        </script>
+    </body>
+</html>
