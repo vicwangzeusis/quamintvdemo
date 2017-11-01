@@ -233,8 +233,8 @@ body {
             background: #CD3421; }
 
 .showSolid {
-  -webkit-animation: 0.8s showSolid;
-  animation: 0.8s showSolid; }
+  -webkit-animation: 2s showSolid;
+  animation: 2s showSolid; }
 
 @-webkit-keyframes showSolid {
   0% {

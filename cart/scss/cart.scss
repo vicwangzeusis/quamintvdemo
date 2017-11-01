@@ -232,8 +232,8 @@ body {
 }
 
 .showSolid {
-	-webkit-animation: 0.8s showSolid;
-	        animation: 0.8s showSolid;
+	-webkit-animation: 2s showSolid;
+	        animation: 2s showSolid;
 }
 @-webkit-keyframes showSolid {
   0% {opacity: 0.6; }
