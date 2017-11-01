@@ -230,8 +230,25 @@ body {
 		}
 	}
 }
+
+.showSolid {
+	-webkit-animation: 0.8s showSolid;
+	        animation: 0.8s showSolid;
+}
+@-webkit-keyframes showSolid {
+  0% {opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+@keyframes showSolid {
+  0% {  opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
 .cartFloat {
-	// opacity: 0.8;
+	@include transition;
+	opacity: 0.6;
 	width: 39px;
 	height: 34px;
 	position: absolute;
@@ -239,6 +256,10 @@ body {
 	top: 350px;
 	z-index: 2;
 	cursor: pointer;
+	&:hover {
+		@include transition;
+		opacity: 1;
+	}
 	>img {
 		width: 100%;
 		height: 100%;
@@ -312,9 +333,6 @@ body {
 		margin-right: -10px;
 	}
 }
-
-
-
 
 
 

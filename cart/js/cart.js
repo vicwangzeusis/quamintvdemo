@@ -21,10 +21,12 @@ $(document).ready(function(){
   $(".addToCartButton").click(function(){
     $("#cycleFloat").stop();
     $("#cartFloatNumber").removeClass("showNumber");
+    $("#cartFloat").removeClass("showSolid");
     $("#cycleFloat").css({"display":"block","opacity":0.7,"width":60,"height":60,"top":300,"left":500});
     $("#cycleFloat").animate({opacity:'0.6',width:'6px',height:'6px'},800,function(){
       $("#cycleFloat").css({"display":"none"});
       $("#cartFloatNumber").addClass("showNumber");
+      $("#cartFloat").addClass("showSolid");
       var cartNumber = parseInt($("#cartNumber").html());
       if (cartNumber >= 99) {
         $("#cartNumber").text("99+");
