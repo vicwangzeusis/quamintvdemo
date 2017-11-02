@@ -30,11 +30,26 @@ $(document).ready(function(){
       var cartNumber = parseInt($("#cartNumber").html());
       if (cartNumber >= 99) {
         $("#cartNumber").text("99+");
+        $("#mainCart_title").text("购物车 (99+)");
       }else {
         $("#cartNumber").text(cartNumber+1);
+        $("#mainCart_title").text("购物车 ("+ (cartNumber+1) + ")");
       }
       $(".cartFloatButton").attr("src","./images/cart.gif")
     });
     bool.start();
   });
+
+  $("#cartFloat").click(function(){
+    $("#mainCart").animate({right:'0'},300,function(){
+      $("#mainCart").addClass("shadow");
+    });
+  });
+
+  $("#mainCart_close").click(function(){
+    $("#mainCart").animate({right:'-342'},300,function(){
+      $("#mainCart").removeClass("shadow");
+    });
+  });
+
 });
