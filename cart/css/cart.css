@@ -195,6 +195,11 @@ body {
         height: 100%;
         top: -20px; }
         .storeFloat .productList .product > .detailFloat > .detailText {
+          transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          cursor: pointer;
           text-align: justify;
           width: 100px;
           height: 100px;
@@ -207,6 +212,12 @@ body {
           text-overflow: ellipsis;
           -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+          .storeFloat .productList .product > .detailFloat > .detailText:hover {
+            transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            text-decoration: underline; }
         .storeFloat .productList .product > .detailFloat > .addToCartButton {
           transition: all 0.4s;
           -moz-transition: all 0.4s;

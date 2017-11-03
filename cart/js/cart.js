@@ -52,4 +52,12 @@ $(document).ready(function(){
     });
   });
 
+  $(".detailText").click(function(){
+    console.log(1);
+    $("#mainCart").animate({right:'0'},300,function(){
+      $("#mainCart").addClass("shadow");
+      $("#mainCart_title").text("商品详情");
+    });
+  });
+
 });
