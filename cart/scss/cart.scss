@@ -256,7 +256,6 @@ body {
 
 .cartFloat {
 	@include transition;
-	opacity: 0.6;
 	width: 39px;
 	height: 34px;
 	position: absolute;
@@ -276,9 +275,9 @@ body {
 		opacity: 0;
 		position: absolute;
 		bottom: 30px;
-		left: 15px;
+		left: 10px;
 		font-family: 'fettemittelschriftregular';
-		font-size: 24px;
+		font-size: 30px;
 		color: $main_color;
 	}
 	.showNumber {
@@ -289,18 +288,18 @@ body {
 	@-webkit-keyframes showNumber {
 	  0% { bottom: 30px; opacity: 0 }
 	  50% { opacity: 1; }
-	  100% { bottom: 60px; left: 5px; opacity: 0; }
+	  100% { bottom: 60px; left: -5px; opacity: 0; }
 	}
 	@keyframes showNumber {
 	  0% { bottom: 30px; opacity: 0 }
 	  50% { opacity: 1; }
-	  100% { bottom: 60px; left: 5px; opacity: 0; }
+	  100% { bottom: 60px; left: -5px; opacity: 0; }
 	}
 }
 .cycleFloat {
 	display: none;
 	position: absolute;
-	z-index: 1;
+	z-index: 4;
 	width: 60px;
 	height: 60px;
 	background: $main_color;
@@ -311,7 +310,9 @@ body {
 	left: 500px;
 }
 .cartNumber {
+	display: none;
 	position: absolute;
+	z-index: 1;
 	top: -10px;
 	right: 20px;
 	height: 14px;
@@ -350,20 +351,45 @@ body {
 	width: 342px;
 	height: 100%;
 	background: #fdfdfd;
+	>img {
+		width: 100%;
+		height: 585px;
+	}
 	.mainCart_header {
 		width: 100%;
 		height: 50px;
 		background: #fff;
 		font-size: 13px;
 		line-height: 50px;
-		color: $main_color;
+		color: #666;
 		font-weight: bold;
 		border-bottom: 1px solid #eee;
 		text-align: center;
 		.mainCart_close {
 			@include transition;
 			position: absolute;
+			top: 0;
 			left: 0;
+			line-height: 50px;
+			width: 50px;
+			text-align: center;
+			font-size: 20px;
+			color: #666;
+			cursor: pointer;
+			&:hover {
+				@include transition;
+				background: #eee;
+			}
+			&:active {
+				@include transition;
+				background: #ddd;
+			}
+		}
+		.mainCart_mine {
+			@include transition;
+			position: absolute;
+			top: 0;
+			right: 0;
 			line-height: 50px;
 			width: 50px;
 			text-align: center;
@@ -387,10 +413,22 @@ body {
 	        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 }
 
+.cartFloat_first {
+	position: absolute;
+	z-index: 2;
+	right: -6px;
+	top: 357px;
+	width: 50px;
+	height: 50px;
+	>img {
+		width: 100%;
+		height: 100%;
+	}
+}
 
-
-
-
+.cartFloatButton {
+	display: none;
+}
 
 
 

@@ -19,28 +19,37 @@ $(document).ready(function(){
   });
 
   $(".addToCartButton").click(function(){
-    $("#cycleFloat").stop();
-    $("#cartFloatNumber").removeClass("showNumber");
-    $("#cartFloat").removeClass("showSolid");
-    $("#cycleFloat").css({"display":"block","opacity":0.7,"width":60,"height":60,"top":300,"left":500});
-    $("#cycleFloat").animate({opacity:'0.6',width:'6px',height:'6px'},800,function(){
-      $("#cycleFloat").css({"display":"none"});
+    var cartNumber = parseInt($("#cartNumber").html());
+    if (cartNumber == 0) {
+      $("#cartFloat_first_img").attr("src","./images/cart_show.gif");
+      $("#cartNumber").css({"display":"block"});
       $("#cartFloatNumber").addClass("showNumber");
-      $("#cartFloat").addClass("showSolid");
-      var cartNumber = parseInt($("#cartNumber").html());
+      $("#cartNumber").text(cartNumber+1);
+      $("#cycleFloat").css({"display":"block","opacity":0.7,"width":60,"height":60,"top":300,"left":500});
+      $("#cycleFloat").animate({opacity:'0.6',width:'6px',height:'6px'},800);
+      // bool.start();
+    }else {
+      $("#cartFloat_first").css({"display":"none"});
+      $(".cartFloatButton").css({"display":"block"});
+      $("#cycleFloat").stop();
+      $("#cartFloatNumber").removeClass("showNumber");
+      $("#cycleFloat").css({"display":"block","opacity":0.7,"width":60,"height":60,"top":300,"left":500});
+      $("#cycleFloat").animate({opacity:'0.6',width:'6px',height:'6px'},800,function(){
+        $("#cycleFloat").css({"display":"none"});
+      });
+      $("#cartFloatNumber").addClass("showNumber");
       if (cartNumber >= 99) {
         $("#cartNumber").text("99+");
-        $("#mainCart_title").text("购物车 (99+)");
       }else {
         $("#cartNumber").text(cartNumber+1);
-        $("#mainCart_title").text("购物车 ("+ (cartNumber+1) + ")");
       }
-      $(".cartFloatButton").attr("src","./images/cart.gif")
-    });
-    bool.start();
+      $(".cartFloatButton").attr("src","./images/cart.gif");
+      // bool.start();
+    }
   });
 
   $("#cartFloat").click(function(){
+    $(".mainCart_pic").attr("src","./images/gwc.jpg");
     $("#mainCart").animate({right:'0'},300,function(){
       $("#mainCart").addClass("shadow");
     });
@@ -53,7 +62,7 @@ $(document).ready(function(){
   });
 
   $(".detailText").click(function(){
-    console.log(1);
+    $(".mainCart_pic").attr("src","./images/spxq.jpg");
     $("#mainCart").animate({right:'0'},300,function(){
       $("#mainCart").addClass("shadow");
       $("#mainCart_title").text("商品详情");
