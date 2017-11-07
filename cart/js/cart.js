@@ -27,7 +27,7 @@ $(document).ready(function(){
       $("#cartNumber").text(cartNumber+1);
       $("#cycleFloat").css({"display":"block","opacity":0.7,"width":60,"height":60,"top":300,"left":500});
       $("#cycleFloat").animate({opacity:'0.6',width:'6px',height:'6px'},800);
-      // bool.start();
+      bool.start();
     }else {
       $("#cartFloat_first").css({"display":"none"});
       $(".cartFloatButton").css({"display":"block"});
@@ -44,12 +44,11 @@ $(document).ready(function(){
         $("#cartNumber").text(cartNumber+1);
       }
       $(".cartFloatButton").attr("src","./images/cart.gif");
-      // bool.start();
+      bool.start();
     }
   });
 
   $("#cartFloat").click(function(){
-    $(".mainCart_pic").attr("src","./images/gwc.jpg");
     $("#mainCart").animate({right:'0'},300,function(){
       $("#mainCart").addClass("shadow");
     });
@@ -69,4 +68,22 @@ $(document).ready(function(){
     });
   });
 
+  $(".mainCart_pic").click(function(){
+    $(".mainCart_pic").attr("src","./images/gwc.jpg");
+  })
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
