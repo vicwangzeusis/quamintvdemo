@@ -1,0 +1,17 @@
+.dianshangziyuan_headerBg {
+	width: 100%;
+	margin: 0 auto;
+	height: 300px;
+	background: url(../images/dianshangziyuanbanner@2x.jpg) no-repeat center;
+	background-size: 1500px;
+	background-color: $purple_15;
+}
+
+@media (max-width: 768px) {
+	.dianshangziyuan_headerBg {
+		background: url(../images/dianshangziyuan@2x.jpg) no-repeat center;
+		background-color: $purple_15;
+		height: 38vw;
+		background-size: 100%;
+	}
+}

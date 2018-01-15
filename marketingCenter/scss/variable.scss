@@ -1,0 +1,31 @@
+$purple_1: #B6AFD8;
+$purple_2: #9E96C5;
+$purple_3: #1D1B28;
+$purple_4: #D9D5EF;
+$purple_5: #645F7F;
+$purple_6: #190F38;
+$purple_7: #2B283B;
+$purple_8: #585371;
+$purple_9: #413D59;
+$purple_10: #0D061F;
+$purple_11: #3D137D;
+$purple_12: #502A8A;
+$purple_13: #E5E3EE;
+$purple_14: #05020D;
+$purple_15: #030108;
+$purple_16: #090611;
+
+$red_1: #E53836;
+$red_2: #EB706E;
+$red_3: #E3413F;
+$red_4: #B11D1B;
+$red_5: #E63C3C;
+$red_6: #C12121;
+$red_7: #611414;
+
+$green_1: #36E5AA;
+
+@mixin transition($time: 0.3s) {
+	-webkit-transition: $time;
+			transition: $time;
+}

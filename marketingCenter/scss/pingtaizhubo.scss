@@ -1,0 +1,420 @@
+.pingtaizhubo_headerBg {
+	width: 100%;
+	margin: 0 auto;
+	height: 300px;
+	background: url(../images/pingtaizhubobanner@2x.jpg) no-repeat center;
+	background-size: 1500px;
+	background-color: $purple_10;
+}
+.zhuboList {
+	width: 100%;
+	height: 100%;
+	background: #eee;
+	padding: 20px 0;
+	.zhuboItem {
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;		
+		overflow: hidden;
+		max-width: 1080px;
+		padding: 20px 20px 0 20px;
+		background: #fff;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		.zhubojieshao {
+			position: relative;
+			-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+			padding: 0 260px 0 200px;
+			overflow: hidden;
+			width: 100%;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 180px;
+				height: 180px;
+			}
+			.zhubojieshao_button {
+				position: absolute;
+				right: 0;
+				top: 100px;
+				overflow: hidden;
+				>a {
+					display: block;
+					float: right;
+					margin-left: 20px;
+				}
+			}
+			.zhubojieshao_text {
+				width: 100%;
+				overflow: hidden;
+				-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+				padding: 20px 0 0 0;
+				margin-bottom: 20px;
+				height: 180px;
+				.zhubojieshao_text_name {
+					font-size: 30px;
+					font-weight: 100;
+					color: $purple_3;
+				}
+				.zhubojieshao_text_detail {
+					font-size: 14px;
+					line-height: 20px;
+					font-weight: 100;
+					color: $purple_3;
+				}
+				.zhubojieshao_text_ziduan {
+					width: 100%;
+					overflow: hidden;
+					margin-bottom: 15px;
+					>div {
+						margin-top: 15px;
+						margin-right: 20px;
+					}
+					.zhubojieshao_text_quanminhao {
+						font-size: 14px;
+						font-weight: normal;
+						color: $purple_3;
+						display: inline-block;
+						&:before {
+							content: "全民号: ";
+						}
+					}
+					.zhubojieshao_text_zhuboleixing {
+						font-size: 14px;
+						font-weight: normal;
+						color: $purple_3;
+						display: inline-block;
+						&:before {
+							content: "主播类型: ";
+						}
+					}
+					.zhubojieshao_text_jiemuleixing {
+						font-size: 14px;
+						font-weight: normal;
+						color: $purple_3;
+						display: inline-block;
+						&:before {
+							content: "节目类型: ";
+						}
+					}
+				}
+			}
+		}
+		.zhuboshuzhi {
+			overflow: hidden;
+			padding: 20px 0 20px 0;
+			.fensishu {
+				>div {
+					text-align: left;
+					&:before {
+						content: "粉丝数";
+					}
+				}
+			}
+			.zhubozhandouli {
+				>div {
+					text-align: center;
+					&:before {
+						content: "主播战斗力";
+					}
+				}
+			}
+			.jiemuzhandouli {
+				>div {
+					text-align: center;
+					&:before {
+						content: "节目战斗力";
+					}
+				}
+			}
+			.zuigaozaixianrenshu {
+				>div {
+					text-align: right;
+					&:before {
+						content: "最高在线人数";
+					}
+				}
+			}
+			.zhuboshuzhi_item {
+				font-weight: 100;
+				color: $purple_3;
+				>div,a {
+					font-size: 26px;
+					line-height: 40px;
+					font-family: 'fettemittelschriftregular';
+					display: block;
+					&:before {
+						display: block;
+						font-size: 14px;
+						line-height: 20px;
+						font-family: Helvetica, Arial,"Microsoft Yahei","STXihei","STHeiti Light","STHeitiSC-Light",sans-serif;
+					}
+				}
+			}
+		}
+	}
+	.zhubohezuo {
+		position: relative;
+		overflow: hidden;
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+		padding-left: 80px;
+		.zhubohezuo_title {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-weight: 100;
+			text-align: center;
+			line-height: 80px;
+			font-size: 14px;
+			color: #fff;
+			width: 80px;
+			height: 80px;
+			background: $purple_11;
+			background-image: -webkit-gradient(linear, left top, right bottom, from(#674897), to(#3D137D));
+			background-image: linear-gradient(to bottom right, #674897 0%, #3D137D 100%);
+		}
+		.zhubohezuo_case {
+			overflow: hidden;
+			display: block;
+			width: 100%;
+			.zhubohezuo_case_item {
+				@include transition;
+				overflow: hidden;
+				position: relative;
+				-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+				border: 1px solid $purple_13;
+				width: 31.333333%;
+				padding-right: 10px;
+				padding-left: 88px;
+				cursor: pointer;
+				margin-left: 2%;
+				margin-bottom: 20px;
+				float: left;
+				height: 80px;
+				&:hover {
+					@include transition;
+					border-color: $red_1;
+				}
+				.zhubohezuo_case_item_img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 78px;
+					width: 78px;
+				}
+				.zhubohezuo_case_item_text {
+					-webkit-box-sizing: border-box;
+							box-sizing: border-box;
+					width: 100%;
+					line-height: 78px;
+					font-size: 14px;
+					color: $purple_6;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					-o-text-overflow:ellipsis;
+					white-space:nowrap;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.pingtaizhubo_headerBg {
+		background: url(../images/pingtaizhubo@2x.jpg) no-repeat center;
+		background-color: $purple_10;
+		height: 38vw;
+		background-size: 100%;
+	}
+	.zhuboList {
+		width: 100%;
+		height: 100%;
+		background: #eee;
+		padding: 0;
+		.zhuboItem {
+			-webkit-box-sizing: border-box;
+					box-sizing: border-box;		
+			overflow: hidden;
+			max-width: 1080px;
+			padding: 20px 20px 0 20px;
+			background: #fff;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			.zhubojieshao {
+				text-align: center;
+				position: relative;
+				-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+				padding: 0;
+				overflow: hidden;
+				width: 100%;
+				img {
+					width: 140px;
+					height: 140px;
+					position: relative;
+					display: inline-block;
+				}
+				.zhubojieshao_button {
+					display: block;
+					position: relative;
+					overflow: hidden;
+					text-align: center;
+					top: 0;
+					right: 0;
+					margin-top: 20px;
+					height: 40px;
+					>a {
+						float: none;
+						display: inline-block;
+						margin: 0;
+						margin-right: 20px;
+						&+a {
+							margin-right: 0;
+						}
+					}
+				}
+				.zhubojieshao_text {
+					height: auto;
+					.zhubojieshao_text_ziduan {
+						.zhubojieshao_text_zhuboleixing {
+							margin-right: 0;
+						}
+					}
+					.zhubojieshao_text_detail {
+						text-align: justify;
+					}
+				}
+			}
+			.zhuboshuzhi {
+				overflow: hidden;
+				padding: 0 0 20px 0;
+				.fensishu {
+					>div {
+						text-align: left;
+						font-size: 18px;
+						&:before {
+							content: "粉丝数";
+						}
+					}
+				}
+				.zhubozhandouli {
+					>div {
+						text-align: center;
+						font-size: 18px;
+						&:before {
+							content: "主播战斗力";
+						}
+					}
+				}
+				.zuigaozaixianrenshu {
+					>div {
+						text-align: right;
+						font-size: 18px;
+						&:before {
+							content: "最高在线人数";
+						}
+					}
+				}
+				.zhuboshuzhi_item {
+					font-weight: 100;
+					color: $purple_3;
+					>div {
+						font-size: 20px;
+						line-height: 40px;
+						font-family: 'fettemittelschriftregular';
+						display: block;
+						&:before {
+							display: block;
+							font-size: 12px;
+							line-height: 20px;
+							font-family: Helvetica, Arial,"Microsoft Yahei","STXihei","STHeiti Light","STHeitiSC-Light",sans-serif;
+						}
+					}
+				}
+			}
+			.zhubohezuo {
+				position: relative;
+				overflow: hidden;
+				-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+				padding: 0;
+				margin: 0 -20px;
+				background: #eee;
+				.zhubohezuo_title {
+					position: relative;
+					width: 100%;
+					font-weight: 100;
+					text-align: center;
+					line-height: 60px;
+					font-size: 18px;
+					color: #bbb;
+					height: 60px;
+					background: #eee;
+				}
+				.zhubohezuo_case {
+					-webkit-box-sizing: border-box;
+							box-sizing: border-box;
+					overflow: hidden;
+					display: block;
+					width: 100%;
+					.zhubohezuo_case_item {
+						overflow: hidden;
+						position: relative;
+						-webkit-box-sizing: border-box;
+								box-sizing: border-box;
+						border: 0 solid $purple_13;
+						width: 100%;
+						padding-right: 10px;
+						padding-left: 88px;
+						cursor: pointer;
+						margin-left: 0;
+						margin-bottom: 10px;
+						height: 80px;
+						background: #fff;
+						.zhubohezuo_case_item_img {
+							position: absolute;
+							top: 0;
+							left: 0;
+							height: 78px;
+							width: 78px;
+						}
+						.zhubohezuo_case_item_text {
+							-webkit-box-sizing: border-box;
+									box-sizing: border-box;
+							width: 100%;
+							background: #fff;
+							line-height: 78px;
+							font-size: 14px;
+							color: $purple_6;
+							overflow: hidden;
+							text-overflow:ellipsis;
+							-o-text-overflow:ellipsis;
+							white-space:nowrap;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

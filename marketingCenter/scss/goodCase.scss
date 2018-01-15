@@ -1,0 +1,24 @@
+.goodCase_headerBg {
+	[class^="icon-"], [class*=" icon-"] {
+		&:before {
+			font-weight: normal;
+			font-size: 24px;
+			vertical-align: top;
+			margin-right: 4px;
+		}
+		vertical-align: middle;
+	}
+}
+.goodCase_all {
+	padding-top: 30px;
+	background: #eee;
+}
+
+@media (max-width: 768px) {
+	.goodCase_headerBg {
+		padding-top: 50px !important;
+	}
+	.cag_item {
+		font-size: 11px !important;
+	}
+}

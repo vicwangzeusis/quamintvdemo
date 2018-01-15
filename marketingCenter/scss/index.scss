@@ -1,0 +1,249 @@
+.index_headerBg {
+	width: 100%;
+	height: 300px;
+	background: $purple_3;
+	background-image: radial-gradient(50% 162%, #35314E 0%, #1D1B28 100%);
+	.container {
+		max-width: 1080px;
+		margin: 0 auto;
+		.bigIcon {
+			@include transition;
+			color: $purple_2;
+			font-weight: bold;
+			&:hover {
+				@include transition;
+				color: $red_1;
+			}
+			div {
+				cursor: pointer;
+				font-size: 50px;
+				margin-top: 130px;
+				text-align: center;
+				&+div {
+					margin-top: 10px;
+					cursor: pointer;
+					text-align: center;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}
+
+.slogan {
+	position: relative;
+	width: 100%;
+	.slogan_text {
+		position: absolute;
+		top: 13%;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		img {
+			max-width: 65%;
+		}
+	}
+	.slogan_img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.slogan_imgMobile {
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+}
+
+.goodCase {
+	position: relative;
+	padding: 100px 0 40px 0;
+	background: $purple_3;
+	background-image: -webkit-gradient(linear, left top, right bottom, from(#3F3B55), to(#1D1B28));
+	background-image: linear-gradient(to bottom right, #3F3B55 0%, #1D1B28 100%);
+	.goodCase_text {
+		position: absolute;
+		width: 100%;
+		top: 40px;
+		display: inline-block;
+		text-align: center;
+	}
+	.goodCase_content {
+		max-width: 1080px;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		.goAllCase {
+			@include transition;
+			position: relative;
+			font-size: 18px;
+			color: #fff;
+			line-height: 30px;
+			display: inline-block;
+			color: $purple_1;
+			&:after {
+				position: absolute;
+				top: 1px;
+				content: "\e91f";
+			}
+			&:hover {
+				@include transition;
+				color: #fff;
+			}
+		}
+		.goodCase_item {
+			@include transition;
+			cursor: pointer;
+			width: 44%;
+			margin: 3%;
+			background: #fff;
+			float: left;
+			&:hover {
+				@include transition;
+				-webkit-box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2);
+				        box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2);
+			}
+			>img {
+				width: 100%;
+			}
+			>img+div {
+				border: 1px solid #fff;
+				-webkit-box-sizing: border-box;
+				        box-sizing: border-box;
+				position: relative;
+				width: 100%;
+				text-align: left;
+				>img {
+					width: 17%;
+					vertical-align: middle;
+				}
+				>p {
+					-webkit-box-sizing: border-box;
+					        box-sizing: border-box;
+					width: 83%;
+					display: inline-block;
+					vertical-align: middle;
+					padding-left: 10px;
+					padding-right: 15px;
+					font-size: 18px;
+					color: #111;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					-o-text-overflow:ellipsis;
+					white-space:nowrap;
+				}
+			}
+		}
+	}
+}
+
+.cooperation {
+	position: relative;
+	width: 100%;
+	padding: 100px 0 60px 0;
+	background: #fff;
+	.hezuopinpai_text {
+		position: absolute;
+		top: 60px;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+	}
+	.cooperation_content {
+		text-align: center;
+		max-width: 1080px;
+		margin: 0 auto;
+		>img {
+			width: 12%;
+			margin: 6%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.index_headerBg {
+		height: 160px;
+		.container {
+			.bigIcon {
+				div {
+					font-size: 30px;
+					margin-top: 70px;
+					&+div {
+						margin-top: 6px;
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	}
+	.slogan {
+		.slogan_text {
+			>img {
+				max-width: 80%;
+			}
+		}
+		.slogan_img {
+			display: none;
+		}
+		.slogan_imgMobile {
+			display: block;
+		}
+	}
+	.goodCase {
+		padding-top: 43px;
+		padding-bottom: 20px; 
+		.goodCase_text {
+			top: 20px;
+			>img {
+				width: 85px;
+				opacity: 0.5;
+			}
+		}
+		.goodCase_content {
+			.goAllCase {
+				font-size: 14px;
+			}
+			.goodCase_item {
+				width: 94%;
+				>img+div {
+					>p {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	.cooperation {
+		position: relative;
+		width: 100%;
+		padding: 60px 0 60px 0;
+		background: #fff;
+		.hezuopinpai_text {
+			position: absolute;
+			top: 30px;
+			width: 100%;
+			display: inline-block;
+			text-align: center;
+			>img {
+				width: 80px;
+			}
+		}
+		.cooperation_content {
+			text-align: center;
+			max-width: 1080px;
+			margin: 0 auto;
+			>img {
+				width: 20%;
+				margin: 6%;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
