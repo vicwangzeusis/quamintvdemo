@@ -35,12 +35,13 @@ $(document).ready(function(){
 	    }else if(nameAndCompany.length === 0){
 	        $(".nameWarningMessage").show();
 	    }else if(/^1[34578]\d{9}$/.test(phoneNumber)&nameAndCompany.length !== 0){
+	    	$(".dialog").show();
 			$.ajax({
 			  type: "POST",
 			  url: "test.php",
 			  data: {phoneNumber: phoneNumber, nameAndCompany: nameAndCompany},
 			  success: function(){
-			  	$(".dialog").show();
+			  	// $(".dialog").show();
 			  	$("#phoneNumber").val("");
 			  	$("#nameAndCompany").val("");;
 			  }
