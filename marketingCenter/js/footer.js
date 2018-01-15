@@ -35,15 +35,17 @@ $(document).ready(function(){
 	    }else if(nameAndCompany.length === 0){
 	        $(".nameWarningMessage").show();
 	    }else if(/^1[34578]\d{9}$/.test(phoneNumber)&nameAndCompany.length !== 0){
-	    	$(".dialog").show();
+	    	$(".dialog").show(); //测试用
+	    	$("#phoneNumber").val(""); //测试用
+			$("#nameAndCompany").val(""); //测试用
 			$.ajax({
 			  type: "POST",
 			  url: "test.php",
 			  data: {phoneNumber: phoneNumber, nameAndCompany: nameAndCompany},
 			  success: function(){
 			  	// $(".dialog").show();
-			  	$("#phoneNumber").val("");
-			  	$("#nameAndCompany").val("");;
+			  	// $("#phoneNumber").val("");
+			  	// $("#nameAndCompany").val("");
 			  }
 			});
 	    }
