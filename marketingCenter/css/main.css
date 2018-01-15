@@ -24,6 +24,9 @@ a {
 input {
   outline: none; }
 
+img {
+  border: none; }
+
 .loading {
   position: relative;
   display: block;
