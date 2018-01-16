@@ -896,6 +896,9 @@ input:-ms-input-placeholder {
       .cooperation .cooperation_content > img {
         width: 20%;
         margin: 6%; } }
+.adDetail_headerBg {
+  padding: 40px 0 40px 0 !important; }
+
 .ad_headerBg {
   width: 100%;
   overflow: hidden;
@@ -1006,8 +1009,8 @@ input:-ms-input-placeholder {
     margin: 10px 0;
     width: 100%; }
   .ad_content > h2 {
-    margin: 30px 0 10px 0;
-    font-size: 40px;
+    margin: 50px 0 30px 0;
+    font-size: 34px;
     font-weight: 100;
     text-align: center;
     color: #1D1B28; }
@@ -1027,7 +1030,14 @@ input:-ms-input-placeholder {
       display: inline-block;
       float: none; }
 
+.adList .goodCase_item > div > p {
+  line-height: 60px;
+  width: 100% !important; }
+
 @media (max-width: 768px) {
+  .adDetail_headerBg {
+    padding: 10px 0 40px 0 !important; }
+
   .ad_headerBg {
     padding-top: 70px; }
     .ad_headerBg .container .cag > div {
@@ -1060,8 +1070,8 @@ input:-ms-input-placeholder {
       margin: 10px 0;
       width: 100%; }
     .ad_content > h2 {
-      margin: 30px 0 10px 0;
-      font-size: 30px;
+      margin: 30px 0 20px 0;
+      font-size: 20px;
       font-weight: 100;
       text-align: center;
       color: #1D1B28; }
